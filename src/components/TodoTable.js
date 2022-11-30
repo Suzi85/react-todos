@@ -8,6 +8,7 @@ function TodoTable(props) {
                               <th scope='col'>#</th>
                               <th scope='col'>Description</th>
                               <th scope='col'>Assigned</th>
+                              <th scope='col'>Action</th>
                         </tr>
                   </thead>
                   <tbody>
@@ -16,7 +17,10 @@ function TodoTable(props) {
                                     key={todo.rowNumber}
                                     rowNumber={todo.rowNumber}
                                     rowDescription={todo.rowDescription}
-                                    rowAssigned={todo.rowAssigned} />
+                                    rowAssigned={todo.rowAssigned}
+
+                                    deleteTodo={props.deleteTodo}
+                              />
 
                         ))}
 
